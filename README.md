@@ -2,10 +2,15 @@ Getting Started
 ##### 1. Check out the repository
 
 ```bash
-  git clone [url this repo]
+  git clone git@github.com:Apachina/test_task.git
 ```
 
-##### 2. Create and fill in local_env.yml using local_env.yml.sample
+##### 2. Create database and load migrations
+
+```bash
+  rake db:create
+  rske db:migrate
+```
 
 ##### 3. Start the Rails server
 
@@ -13,11 +18,9 @@ Getting Started
   rails s
 ```
 
-##### And now you can use API.
+##### If you  want to watch coverage, please run tests and open coverage file after all tests:
 
-Project have controller with andpoints:
-- index
-- show
-- update
-- delete
-- create
+```bash
+  rspec
+  xdg-open coverage/index.html
+```
