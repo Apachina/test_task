@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :property do
+    id { 1 }
     name { "MyString" }
     description { "MyString" }
     address { "MyString" }
