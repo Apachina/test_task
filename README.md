@@ -1,24 +1,23 @@
-# README
+Getting Started
+##### 1. Check out the repository
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```bash
+  git clone [url this repo]
+```
 
-Things you may want to cover:
+##### 2. Create and fill in local_env.yml using local_env.yml.sample
 
-* Ruby version
+##### 3. Start the Rails server
 
-* System dependencies
+```bash
+  rails s
+```
 
-* Configuration
+##### And now you can use API.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Project have controller with andpoints:
+- index
+- show
+- update
+- delete
+- create
