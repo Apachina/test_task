@@ -53,6 +53,12 @@ RSpec.describe Api::V1::PropertiesController do
       @property = create(:property)
     end
 
+    it "not found property" do
+      expect{
+        delete :destroy, params: { id: @property.id + 1 }
+      }.to raise_error(ActiveRecord::RecordNotFound)
+    end
+
     it "deletes the property" do
       expect{
         delete :destroy, params: { id: @property.id }

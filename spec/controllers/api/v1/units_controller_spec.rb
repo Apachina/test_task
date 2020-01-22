@@ -20,6 +20,12 @@ RSpec.describe Api::V1::UnitsController do
       @unit = create(:unit)
     end
 
+    it "not found unit" do
+      expect{
+        delete :destroy, params: { id: @unit.id + 1 }
+      }.to raise_error(ActiveRecord::RecordNotFound)
+    end
+
     it "deletes the unit" do
       expect{
         delete :destroy, params: { id: @unit.id }
