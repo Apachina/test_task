@@ -32,7 +32,7 @@ RSpec.describe Api::V1::PropertiesController do
 
   describe "create" do
     context "with valid attributes" do
-      it "creates a new property" do
+      it "a new property" do
         expect{
           post :create, :params => { :property => attributes_for(:property), :format => :json }
         }.to change(Property,:count).by(1)
@@ -65,7 +65,7 @@ RSpec.describe Api::V1::PropertiesController do
       @property = create(:property)
     end
 
-    context "valid attributes" do
+    context "with valid attributes" do
       it "change @property's attributes" do
         put :update, params: {id: @property.id, property: attributes_for(:property, name: "Larry", description: "some text")}
         @property.reload
@@ -74,7 +74,7 @@ RSpec.describe Api::V1::PropertiesController do
       end
     end
 
-    context "invalid attributes" do
+    context "with invalid attributes" do
       it "does not change @property's attributes" do
         put :update, params: {id: @property.id, property: attributes_for(:property, name: nil, description: "some text")}
         @property.reload

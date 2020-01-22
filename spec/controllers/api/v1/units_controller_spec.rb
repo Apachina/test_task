@@ -8,7 +8,7 @@ RSpec.describe Api::V1::UnitsController do
       property = create(:property)
     end
 
-    it "creates a new unit" do
+    it "a new unit" do
       expect{
         post :create, :params => { :unit => attributes_for(:unit), :format => :json }
       }.to change(Unit,:count).by(1)
